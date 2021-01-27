@@ -28,10 +28,12 @@ const Widget = ({ header }: WidgetProps) => {
           <S.Title>{title}</S.Title>
         </S.Header>
       )}
-      <S.Form onSubmit={handleSubmit(handleFormData)}>
-        <C.Input name='name' icon={FiUser} placeholder='Nome' />
-        <C.Button type='submit'>Jogar</C.Button>
-      </S.Form>
+      <FormProvider {...formMethods}>
+        <S.Form onSubmit={handleSubmit(handleFormData)}>
+          <C.Input name='name' icon={FiUser} placeholder='Nome' />
+          <C.Button type='submit'>Jogar</C.Button>
+        </S.Form>
+      </FormProvider>
       <S.Content>
         <S.Text>{description}</S.Text>
       </S.Content>
