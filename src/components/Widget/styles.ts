@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import { Form as UnForm } from '@unform/web';
 
 export const Container = styled.div`
   ${({ theme: { colors } }) => css`
@@ -19,6 +20,8 @@ export const Header = styled.header`
     padding: 1.6rem 3.2rem;
   `}
 `;
+
+export const Form = styled(UnForm)``;
 
 export const Content = styled.div`
   padding: 2.4rem 3.2rem;

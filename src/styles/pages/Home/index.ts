@@ -12,7 +12,7 @@ export const BackgroundImage = styled.div<BackgroundImageProps>`
     background-color: ${colors.black};
     background-position: center;
     background-size: cover;
-    @media screen and (max-width: 500px) {
+    @media screen and (max-width: 425px) {
       background-image: none;
       &:after {
         content: '';
@@ -40,7 +40,16 @@ export const Container = styled.div`
   width: 100%;
   max-width: 35rem;
   padding-top: 4.8rem;
-  margin: auto 10%;
+  margin: auto 16%;
+  @media screen and (max-width: 768px) {
+    margin: auto 8%;
+  }
+  @media screen and (max-width: 425px) {
+    margin: auto;
+  }
+  @media screen and (max-width: 320px) {
+    max-width: 28rem;
+  }
 `;
 
 export const Widget = styled.header`
